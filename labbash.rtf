@@ -1,0 +1,290 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2757
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Last login: Mon Oct 16 12:08:53 on console\
+(base) sritomakoyal@Sritomas-MacBook-Air ~ % mkdir IH-Labs\
+(base) sritomakoyal@Sritomas-MacBook-Air ~ % ls\
+Applications	Downloads	Library		Pictures\
+Desktop		IH-Labs		Movies		Public\
+Documents	Ironhack	Music		anaconda3\
+(base) sritomakoyal@Sritomas-MacBook-Air ~ % cd IH-Labs\
+(base) sritomakoyal@Sritomas-MacBook-Air IH-Labs % ls\
+(base) sritomakoyal@Sritomas-MacBook-Air IH-Labs % git clone\
+fatal: You must specify a repository to clone.\
+\
+usage: git clone [<options>] [--] <repo> [<dir>]\
+\
+    -v, --verbose         be more verbose\
+    -q, --quiet           be more quiet\
+    --progress            force progress reporting\
+    --reject-shallow      don't clone shallow repository\
+    -n, --no-checkout     don't create a checkout\
+    --bare                create a bare repository\
+    --mirror              create a mirror repository (implies bare)\
+    -l, --local           to clone from a local repository\
+    --no-hardlinks        don't use local hardlinks, always copy\
+    -s, --shared          setup as shared repository\
+    --recurse-submodules[=<pathspec>]\
+                          initialize submodules in the clone\
+    --recursive ...       alias of --recurse-submodules\
+    -j, --jobs <n>        number of submodules cloned in parallel\
+    --template <template-directory>\
+                          directory from which templates will be used\
+    --reference <repo>    reference repository\
+    --reference-if-able <repo>\
+                          reference repository\
+    --dissociate          use --reference only while cloning\
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream\
+    -b, --branch <branch>\
+                          checkout <branch> instead of the remote's HEAD\
+    -u, --upload-pack <path>\
+                          path to git-upload-pack on the remote\
+    --depth <depth>       create a shallow clone of that depth\
+    --shallow-since <time>\
+                          create a shallow clone since a specific time\
+    --shallow-exclude <revision>\
+                          deepen history of shallow clone, excluding rev\
+    --single-branch       clone only one branch, HEAD or --branch\
+    --no-tags             don't clone any tags, and make later fetches not to follow them\
+    --shallow-submodules  any cloned submodules will be shallow\
+    --separate-git-dir <gitdir>\
+                          separate git dir from working tree\
+    -c, --config <key=value>\
+                          set config inside the new repository\
+    --server-option <server-specific>\
+                          option to transmit\
+    -4, --ipv4            use IPv4 addresses only\
+    -6, --ipv6            use IPv6 addresses only\
+    --filter <args>       object filtering\
+    --also-filter-submodules\
+                          apply partial clone filters to submodules\
+    --remote-submodules   any cloned submodules will use their remote-tracking branch\
+    --sparse              initialize sparse-checkout file to include only files at root\
+    --bundle-uri <uri>    a URI for downloading bundles before fetching from origin remote\
+\
+(base) sritomakoyal@Sritomas-MacBook-Air IH-Labs % git clone https://github.com/SritomaK/lab-bash.git\
+Cloning into 'lab-bash'...\
+remote: Enumerating objects: 40, done.\
+remote: Total 40 (delta 0), reused 0 (delta 0), pack-reused 40\
+Receiving objects: 100% (40/40), 12.63 KiB | 862.00 KiB/s, done.\
+Resolving deltas: 100% (11/11), done.\
+(base) sritomakoyal@Sritomas-MacBook-Air IH-Labs % ls\
+lab-bash\
+(base) sritomakoyal@Sritomas-MacBook-Air IH-Labs % cd lab-bash\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % ls\
+exercices	lorem		outputs\
+inputs		lorem-copy	readme.md\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % echo "Hello World"\
+Hello World\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % mkdir new_dir\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % ls\
+exercices	lorem		new_dir		readme.md\
+inputs		lorem-copy	outputs\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % rmdir new_dir\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % ls\
+exercices	lorem		outputs\
+inputs		lorem-copy	readme.md\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp sed.txt lorem-copy\
+cp: sed.txt: No such file or directory\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/sed.txt lorem-copy/sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cd lorem\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % ls\
+at.txt		at.txte		lorem.txt	sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % cp lorem/at.txt lorem-copy/\
+cp: directory lorem-copy does not exist\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % cp lorem/at.txt lorem-copy\
+cp: lorem/at.txt: No such file or directory\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % cd ..\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/at.txt lorem-copy/\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % ls\
+exercices	inputs		lorem		lorem-copy	outputs		readme.md\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cd lorem-copy\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % ls\
+at.txt		dummy_file.txt	sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % cd..\
+zsh: command not found: cd..\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % cd..\
+zsh: command not found: cd..\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % cd ..\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/lorem.txt lorem-copy/\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cd lorem-copy\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % ls\
+at.txt		dummy_file.txt	lorem.txt	sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem-copy % cd ..\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cd lorem\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % ls\
+at.txt		at.txte		lorem.txt	sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % cd ..\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem.txt; cp at.txt lorem-copy\
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory\
+cp: at.txt: No such file or directory\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/lorem.txt; lorem/at.txt lorem-copy \
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory\
+At: garbled time\
+lorem/at.txt: line 2: deleniti: command not found\
+lorem/at.txt: line 3: provident,: command not found\
+lorem/at.txt: line 4: Et: command not found\
+lorem/at.txt: line 5: Nam: command not found\
+lorem/at.txt: line 6: maxime: command not found\
+lorem/at.txt: line 7: Temporibus: command not found\
+lorem/at.txt: line 8: ut: command not found\
+lorem/at.txt: line 9: Itaque: command not found\
+lorem/at.txt: line 10: alias: consequatur: not found\
+lorem/at.txt: line 10: alias: aut: not found\
+lorem/at.txt: line 10: alias: perferendis: not found\
+lorem/at.txt: line 10: alias: doloribus: not found\
+lorem/at.txt: line 10: alias: asperiores: not found\
+lorem/at.txt: line 10: alias: repellat: not found\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/lorem.txt; lorem/at.txt lorem-copy/\
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory\
+At: garbled time\
+lorem/at.txt: line 2: deleniti: command not found\
+lorem/at.txt: line 3: provident,: command not found\
+lorem/at.txt: line 4: Et: command not found\
+lorem/at.txt: line 5: Nam: command not found\
+lorem/at.txt: line 6: maxime: command not found\
+lorem/at.txt: line 7: Temporibus: command not found\
+lorem/at.txt: line 8: ut: command not found\
+lorem/at.txt: line 9: Itaque: command not found\
+lorem/at.txt: line 10: alias: consequatur: not found\
+lorem/at.txt: line 10: alias: aut: not found\
+lorem/at.txt: line 10: alias: perferendis: not found\
+lorem/at.txt: line 10: alias: doloribus: not found\
+lorem/at.txt: line 10: alias: asperiores: not found\
+lorem/at.txt: line 10: alias: repellat: not found\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cp lorem/lorem.txt ; lorem/at.txt lorem-copy/\
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file target_file\
+       cp [-R [-H | -L | -P]] [-fi | -n] [-aclpSsvXx] source_file ... target_directory\
+At: garbled time\
+lorem/at.txt: line 2: deleniti: command not found\
+lorem/at.txt: line 3: provident,: command not found\
+lorem/at.txt: line 4: Et: command not found\
+lorem/at.txt: line 5: Nam: command not found\
+lorem/at.txt: line 6: maxime: command not found\
+lorem/at.txt: line 7: Temporibus: command not found\
+lorem/at.txt: line 8: ut: command not found\
+lorem/at.txt: line 9: Itaque: command not found\
+lorem/at.txt: line 10: alias: consequatur: not found\
+lorem/at.txt: line 10: alias: aut: not found\
+lorem/at.txt: line 10: alias: perferendis: not found\
+lorem/at.txt: line 10: alias: doloribus: not found\
+lorem/at.txt: line 10: alias: asperiores: not found\
+lorem/at.txt: line 10: alias: repellat: not found\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, \
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/at.txt \
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum \
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non \
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga. \
+Et harum quidem rerum facilis est ET expedita distinctio. \
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod \
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. \
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET \
+ut ET voluptates repudiandae sint ET molestiae non recusandae. \
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores \
+alias consequatur aut perferendis doloribus asperiores repellat\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/lorem.txt\
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\f1\b \cf3 \cb2 %
+\f0\b0 \cf2 \cb1                                                                                      (base) sritomakoyal@Sritomas-MacBook-Air lab-bash % head -n 3 lorem-copy/sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % head - 3 lorem-copy/sed.txt\
+head: -: No such file or directory\
+head: 3: No such file or directory\
+==> lorem-copy/sed.txt <==\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, \
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % tail -3 lorem-copy/sed.txt\
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % tail -3 lorem-copy/sed.txt\
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % head -3 lorem-copy/sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % echo "Homo homini lupus." >> lorem-copy/sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % tail -3 lorem-copy/sed.txt\
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+Homo homini lupus.\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % sed -i 's/et/ET/g' lorem/at.txt\
+sed: 1: "lorem/at.txt": extra characters at the end of l command\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, \
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % sed -i '' 's/et/ET/g' lorem/at.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/sed.txt\
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, \
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. \
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, \
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. \
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, \
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. \
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, \
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, \
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % whoami\
+sritomakoyal\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % pwd\
+/Users/sritomakoyal/IH-Labs/lab-bash\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cd lorem\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % ls *.txt\
+at.txt		lorem.txt	sed.txt\
+(base) sritomakoyal@Sritomas-MacBook-Air lorem % cd ..\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % cat lorem/sed.txt | wc -l\
+       9\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % rep -l "lorem" * | wc -l\
+zsh: command not found: rep\
+       0\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % grep -l "lorem" * | wc -l\
+grep: exercices: Is a directory\
+grep: inputs: Is a directory\
+grep: lorem: Is a directory\
+grep: lorem-copy: Is a directory\
+grep: outputs: Is a directory\
+       1\
+(base) sritomakoyal@Sritomas-MacBook-Air lab-bash % grep -l "lorem" * | wc -l\
+grep: exercices: Is a directory\
+grep: inputs: Is a directory\
+grep: lorem: Is a directory\
+grep: lorem-copy: Is a directory\
+grep: outputs: Is a directory\
+       1}
